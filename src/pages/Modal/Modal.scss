@@ -10,14 +10,6 @@
     background-color: #e6e8ec;
   }
   
-  .App {
-  
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    
-  }
-  
   .open-modal-btn {
     background: #fff;
     padding: 18px 25px;
@@ -30,16 +22,26 @@
     line-height: 23px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.1s ease-in-out;
-  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
     &:hover {
       box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-      transform: translateY(-1px);
+      transform: translate(-50%, -50%) translateY(-1px);
     }
-  
+    
     &:active {
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-      transform: translateY(0);
+      transform: translate(-50%, -50%) translateY(0);
     }
+  }
+  
+  .back-to-home-btn {
+    margin-left: 95%;
+    top: 20px;
+    right: 20px;
   }
   
   .overlay {
@@ -65,24 +67,24 @@
     transform: translate(-50%, -50%);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
+  }
   
-    img {
-      border-radius: 5px;
-      width: 100%;
-    }
+  img {
+    border-radius: 5px;
+    width: 100%;
+  }
   
-    svg {
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      height: 24px;
-      width: 24px;
-      opacity: 0.3;
-      cursor: pointer;
-  
-      &:hover {
-        opacity: 1;
-      }
+  svg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 24px;
+    width: 24px;
+    opacity: 0.3;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 1;
     }
   }
   
@@ -107,10 +109,5 @@
         transform: translate(-50%, -50%);
       }
     }
-  }
-  .open-modal-btn {
-    position: absolute;
-    left: 50%;
-    top: 50%;
   }
   
