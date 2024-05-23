@@ -7,13 +7,11 @@ import CurrencyConverter from './pages/CurrencyConverter/CurrencyConverter';
 import GuestList from './pages/GuestList/GuestList';
 import Modal from './pages/Modal/Modal';
 import Quiz from './pages/Quiz/Quiz';
-import ErrorBoundary from './ErrorBoundary';
-
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ErrorBoundary><Home /></ErrorBoundary>} />
+        <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/currency-converter" element={<CurrencyConverter />} />
@@ -24,5 +22,7 @@ function App() {
     </Router>
   );
 }
+
+
 
 export default App;
